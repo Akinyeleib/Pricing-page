@@ -1,4 +1,4 @@
-## Pricing Plans
+## Pricing Plans - Backend
 
 Develop the backend logic to handle pricing plans retrievals.
 
