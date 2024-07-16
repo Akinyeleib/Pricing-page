@@ -4,11 +4,24 @@
  API method to apply a discount code to a subscription.
 - **Endpoint**: `/api/pricing/discount`
 - **Method**: POST
-- **Parameters**:
-  - `discount_code` (string) - Discount code to apply.
+- **Parameters**
+  ```
+ {
+  "discount_code": "string"
+}
+```
 - **Responses**:
-  - Status 200: Discount successfully applied.
+```
+{
+  "message": "Discount successfully applied"
+}
+```
   - Status 404: Discount code not valid.
+```
+{
+  "error": "Discount code not valid"
+}
+```
 
 #### Issue #2: Fetch Payment Methods
  API method to retrieve a list of available payment methods for subscriptions.
@@ -16,6 +29,15 @@
 - **Method**: GET
 - **Responses**:
   - Status 200: List of supported payment methods.
+```
+{
+  "payment_methods": [
+    "Debit/Credit Card",
+    "Paypal",
+    "Other"
+  ]
+}
+```
 
 #### Issue #3: Retrieve Pricing Plans
  API method to retrieve a list of all available pricing plans.
